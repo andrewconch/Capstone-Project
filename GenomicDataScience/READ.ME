@@ -1,1 +1,13 @@
+The most comprehensive work of my python programming can be found in GreedyShortestAssembler.py
 
+The Greedy Shortest Assembler script takes a set of cherry-picked FastQ reads that were given to use during the Genomic Data Sceience Specialization via Coursera. These reads do not have duplicates, are all on the same strand (no reverse compliments) and do not containing any sequencing errors.
+
+The assembler develops a kmer-index with a length defined by user-input. The key for the index is the kmer, while the value(s) represent the sequences that the kmer is included in. In practice, the assembler has performed well with a kmerlength of 30. 
+
+After generating a kmer-index, the assembler iterates through a list of the reads in the FastQ file and determines the length of the longest overlap for each read. This is done by taking the kmer-suffix of the given read and referencing the dictionary to find other reads containing the suffix. The overlap function is implemented over the read set and the longest overlap is taken and added to an overlap dictionary.
+
+The maxiumum value from the overlap dictonary is then obtained. This maximum value in the dataset represents the length of the longest overlap within the dictionary. The two overlapping reads are joined and both a removed from the list of reads. For example, ABCDE and CDEFGH are joined into ABCDEFGH, ABCDE and CDEFGH are removed from the list and replaced with one corresponding read ABCDEFGH.
+
+Additionally, the overlap dictionary will be updated.  The key:value pairs containing either read a or read b will be removed and a new entry into the dictionary will be generated. Every instance of read ABCDE or read CDEFGH will be replaced with read ABCDEFGH. The maximum value overlap within the dictionary (the same overlap originally containing read ABCDE and CDEFGH), is removed. The loop continues until no overlaps remain. 
+
+The string with the longest length in the list of reads will correspond to the assembled portion of the genome.
