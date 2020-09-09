@@ -1,6 +1,8 @@
 # ProgrammingProjects
 
-Just a brief collection of my programming work.
+Please excuse my GitHub page if it is confusing, this is my first time using GitHub to post my own work! 
+
+Just a brief collection of my programming work from various courses that I have done.
 
 The work has been separated into two different directories. In the main directory you will find files contaning my work from the Python for Everybody Capstone project. The genomicdatascience directory contains some of my work from the Johns Hopkins Genomic Data Science specialization.
 
