@@ -1,9 +1,8 @@
-# Capstone-Project
-Capstone Project for Python for Everybody specialization.
+# ProgrammingProjects
 
 Just a brief collection of my programming work.
 
-The work has been separated into two different directories. Directory one contains my capstone project from the Python for Everybody Specialization by Dr. Charles Severance. Directory two contains some of my work from the Johns Hopkins Genomic Data Science specialization.
+The work has been separated into two different directories. In the main directory you will find files contaning my work from the Python for Everybody Capstone project. The genomicdatascience directory contains some of my work from the Johns Hopkins Genomic Data Science specialization.
 
 The capstone project for the Python for Everybody specialization was a small project that incorporated Python, a bit of SQL and very limited JavaScript and HTML. The project imports information from a Yelp dataset that is presented in JSON format (business.json). The information is written to a database using the SQLite3 module available for Python by executing rawdatabaseinput.py. Once information is stored in the database, the database is refined by executing jsonbusinessclean.py.
 
