@@ -2,7 +2,6 @@ from collections import defaultdict
 import time
 import itertools as itt
 from operator import itemgetter
-import re
 def readFastq(filename):
     #function for importing sequences and qualities from FastQ file
     sequences = []
@@ -121,6 +120,9 @@ def main():
     while nomoreoverlaps != 1:
         nooverlap = []
         tempoverlapDict = overlapDict.copy()
+         '''cannot iterate over dictionary as it is being modified. instead
+            iterate over a temporary dictionary that is generated at the beginning of
+            each loop'''
         for k in tempoverlapDict:
             if None in k:
                 nooverlap.append(k[0])
@@ -160,9 +162,7 @@ def main():
         tempmax = []
         loopcount = 0
         for k in tempoverlapDict.keys():
-            '''cannot iterate over dictionary as it is being modified. instead
-            iterate over a temporary dictionary that is generated at the beginning of
-            each loop'''
+            #cannot iterate over dictionary as it is being modified
             if any(x in k for x in maxkey):
                 newk = [olapString if x == maxkey[0] else x for x in k]
                 newk = [olapString if x == maxkey[1] else x for x in newk]
